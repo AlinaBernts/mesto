@@ -1,4 +1,4 @@
-.elenents__list {
+.elenent {
   display: grid;
   list-style: none;
   row-gap: 20px;
@@ -11,14 +11,14 @@
 }
 
 @media screen and (max-width: 940px) {
-  .elenents__list {
+  .elenent {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 620px) {
-  .elenents__list {
+  .elenent {
     grid-template-columns: repeat(1, 1fr);
     max-width: 560px;
    }
