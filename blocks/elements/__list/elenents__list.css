@@ -1,0 +1,26 @@
+.elenents__list {
+  display: grid;
+  list-style: none;
+  row-gap: 20px;
+  column-gap: 17px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 880px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 940px) {
+  .elenents__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .elenents__list {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 560px;
+   }
+
+}

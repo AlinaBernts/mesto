@@ -1,0 +1,21 @@
+.elenent__like-button {
+  border: 0;
+  background-color: transparent;
+  width: 22px;
+  height: 19px;
+  margin: 0;
+  cursor: pointer;
+  background-image: url(../../../images/like.svg);
+  background-size: cover;
+  transition: opacity .4s;
+}
+
+.elenent__like-button:hover {
+  opacity: .5;
+}
+
+.elenent__like-button:active {
+  opacity: .5;
+  background-image: url(../../../images/like-active.svg);
+
+}

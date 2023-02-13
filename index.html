@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Место</title>
+</head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <img class="header__logo" src="./images/logo.svg" alt="Логотип Место">
+    </header>
+
+    <main class="content">
+      <section class="profile">
+        <img class="profile__avatar" src="./images/Jacques-Yves-Cousteau.jpg" alt="Жак-Ив Кусто">
+        <div class="profile__info">
+          <div class="profile__name">
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button" type="button"></button>
+          </div>
+          <p class="profile__subtitle">Исследователь океана</p>
+        </div>
+        <button class="profile__add-button" type="button"></button>
+      </section>
+
+
+      <section class="elements">
+        <ul class="elenents__list">
+          <li class="element">
+            <img class="elenent__image" src="./images/Karachayevsk.jpg" alt="Сентинский храм в Карачаевске">
+            <div class="elenent__group">
+              <h2 class="elenent__title">Карачаевск</h2>
+              <button class="elenent__like-button" type="button" aria-label="Поставить лайк"></button>
+            </div>
+          </li>
+
+          <li class="element">
+            <img class="elenent__image" src="./images/Elbrus.png" alt="Гора Эльбрус">
+            <div class="elenent__group">
+              <h2 class="elenent__title">Гора Эльбрус</h2>
+              <button class="elenent__like-button" type="button" aria-label="Поставить лайк"></button>
+            </div>
+          </li>
+
+          <li class="element">
+            <img class="elenent__image" src="./images/Dombay.png" alt="Домбай. Гора Белалакая">
+            <div class="elenent__group">
+              <h2 class="elenent__title">Домбай</h2>
+              <button class="elenent__like-button" type="button" aria-label="Поставить лайк"></button>
+            </div>
+          </li>
+
+          <li class="element">
+            <img class="elenent__image" src="./images/place-altai.jpg" alt="Алтай">
+            <div class="elenent__group">
+              <h2 class="elenent__title">Алтай</h2>
+              <button class="elenent__like-button" type="button" aria-label="Поставить лайк"></button>
+            </div>
+          </li>
+
+          <li class="element">
+            <img class="elenent__image" src="./images/place-kolsky.jpg" alt="Кольский">
+            <div class="elenent__group">
+              <h2 class="elenent__title">Кольский</h2>
+              <button class="elenent__like-button" type="button" aria-label="Поставить лайк"></button>
+            </div>
+          </li>
+
+          <li class="element">
+            <img class="elenent__image" src="./images/place-karelia.jpg" alt="Карелия">
+            <div class="elenent__group">
+              <h2 class="elenent__title">Карелия</h2>
+              <button class="elenent__like-button" type="button" aria-label="Поставить лайк"></button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p class="footer__subtitle">&copy; 2023 Mesto Russia</p>
+    </footer>
+
+  </div>
+  <section class="popup">
+    <div class="popup__container">
+      <h2 class="popup__header">Редактировать профиль</h2>
+      <form action="" class="popup__form">
+        <input type="text" class="popup__input popup__input_name" name="name">
+        <input type="text" class="popup__input popup__input_info" name="info">
+        <button class="popup__button-save" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__button-close" type="button"></button>
+    </div>
+  </section>
+
+  <script src="./scripts/index.js"></script>
+</body>
+</html>
