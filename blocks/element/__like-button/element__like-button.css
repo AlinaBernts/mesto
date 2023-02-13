@@ -1,4 +1,4 @@
-.elenent__like-button {
+.element__like-button {
   border: 0;
   background-color: transparent;
   width: 22px;
@@ -10,11 +10,11 @@
   transition: opacity .4s;
 }
 
-.elenent__like-button:hover {
+.element__like-button:hover {
   opacity: .5;
 }
 
-.elenent__like-button:active {
+.element__like-button:active {
   opacity: .5;
   background-image: url(../../../images/like-active.svg);
 

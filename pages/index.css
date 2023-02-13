@@ -30,12 +30,12 @@
 
 /*element*/
 @import url(../blocks/element/element.css);
-@import url(../blocks/element/__group/elenent__group.css);
-@import url(../blocks/element/__image/elenent__image.css);
-@import url(../blocks/element/__like-button/elenent__like-button.css);
+@import url(../blocks/element/__group/element__group.css);
+@import url(../blocks/element/__image/element__image.css);
+@import url(../blocks/element/__like-button/element__like-button.css);
 @import url(../blocks/element/__list-item/element__list-item.css);
-@import url(../blocks/element/__list/elenent__list.css);
-@import url(../blocks/element/__title/elenent__title.css);
+@import url(../blocks/element/__list/element__list.css);
+@import url(../blocks/element/__title/element__title.css);
 
 /*footer*/
 @import url(../blocks/footer/footer.css);
