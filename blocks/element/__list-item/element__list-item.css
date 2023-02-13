@@ -1,4 +1,4 @@
-.element__list {
+.element__list-item {
   display: flex;
   flex-direction: column;
   max-width: 282px;

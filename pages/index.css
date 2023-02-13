@@ -27,16 +27,15 @@
 @import url(../blocks/profile/__avatar/profile__avatar.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
 
-/*elements*/
-@import url(../blocks/elements/elements.css);
 
 /*element*/
-@import url(../blocks/element/elenent.css);
-@import url(../blocks/element/__title/elenent__title.css);
-@import url(../blocks/element/__like-button/elenent__like-button.css);
-@import url(../blocks/element/__image/elenent__image.css);
+@import url(../blocks/element/element.css);
 @import url(../blocks/element/__group/elenent__group.css);
-@import url(../blocks/element/__list/element__list.css);
+@import url(../blocks/element/__image/elenent__image.css);
+@import url(../blocks/element/__like-button/elenent__like-button.css);
+@import url(../blocks/element/__list-item/element__list-item.css);
+@import url(../blocks/element/__list/elenent__list.css);
+@import url(../blocks/element/__title/elenent__title.css);
 
 /*footer*/
 @import url(../blocks/footer/footer.css);
@@ -53,5 +52,4 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 
 
-@import url();
 @import url();
