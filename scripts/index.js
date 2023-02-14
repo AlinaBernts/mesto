@@ -10,9 +10,9 @@ const saveButton = popup.querySelector('.popup__button-save');
 /*формы*/
 const formElement = popup.querySelector('.popup__form');
 /*форма имени*/
-const nameInput = popup.querySelector('.popup__input_name');
+const nameInput = popup.querySelector('.popup__input_type_name');
 /*форма описания*/
-const infoInput = popup.querySelector('.popup__input_info');
+const infoInput = popup.querySelector('.popup__input_type_info');
 /*ввод значения имени*/
 const profileTitle = document.querySelector('.profile__title');
 /*ввод значения описания*/
@@ -30,17 +30,16 @@ function handleCloseButtonClick() {
 popup.classList.remove('popup_opened');
 }
 
-editButton.addEventListener('click', handleEditButtonClick); /*добавляем выполнение функционала кнопке редактирования*/
-closeButton.addEventListener('click', handleCloseButtonClick); /* доавляем выполнение функционала кнопке закрытия формы*/
-
 /*редактирование формы*/
 function handleFormSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = nameInput.value; /*сохраняем новые введенные данные*/
   profileSubtitle.textContent = infoInput.value;
+  handleCloseButtonClick(); /*закрываем попап при нажатии кнопки сохранить*/
 }
 
-/*сохраняем данные с автоматическим закрытием попапа*/
-saveButton.addEventListener('click', handleCloseButtonClick);
+/*Сохраняем отредактированные данные*/
 formElement.addEventListener('submit', handleFormSubmit);
 
+editButton.addEventListener('click', handleEditButtonClick); /*добавляем выполнение функционала кнопке редактирования*/
+closeButton.addEventListener('click', handleCloseButtonClick); /* доавляем выполнение функционала кнопке закрытия формы*/
