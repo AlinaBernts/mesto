@@ -8,6 +8,7 @@
 
 @media screen and (max-width: 940px) {
   .content {
+    box-sizing: border-box;
     padding: 0 19px;
   }
 }

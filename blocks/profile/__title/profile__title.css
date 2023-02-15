@@ -16,12 +16,8 @@
   font-size: 27px;
   line-height: 33px;
   text-align: center;
+  max-width: 215px;
+  margin: 5px 10px 0 19px;
 }
 }
 
-@media screen and (max-width: 425px) {
-  .profile__title{
-  max-width: 189px;
-  margin: 5px 10px 0 15px;
-}
-}
