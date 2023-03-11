@@ -1,9 +1,10 @@
 .element {
-  margin: 0 auto 66px;
+  max-width: 880px;
+  margin: 0 0 66px;
 }
 
 @media screen and (max-width: 680px) {
   .element {
-    margin: 0 auto 48px;
+    margin: 0 0 48px;
   }
 }

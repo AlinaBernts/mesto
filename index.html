@@ -25,61 +25,15 @@
           </div>
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
-        <button class="profile__add-button" type="button"></button>
+        <button class="profile__add-button" type="button" aria-label="Добавить изображение"></button>
       </section>
 
 
       <section class="element">
-        <ul class="element__list">
-          <li class="element__list-item">
-            <img class="element__image" src="./images/Karachayevsk.jpg" alt="Сентинский храм в Карачаевске">
-            <div class="element__group">
-              <h2 class="element__title">Карачаевск</h2>
-              <button class="element__like-button" type="button" aria-label="Поставить лайк"></button>
-            </div>
-          </li>
-
-          <li class="element__list-item">
-            <img class="element__image" src="./images/Elbrus.png" alt="Гора Эльбрус">
-            <div class="element__group">
-              <h2 class="element__title">Гора Эльбрус</h2>
-              <button class="element__like-button" type="button" aria-label="Поставить лайк"></button>
-            </div>
-          </li>
-
-          <li class="element__list-item">
-            <img class="element__image" src="./images/Dombay.png" alt="Домбай. Гора Белалакая">
-            <div class="element__group">
-              <h2 class="element__title">Домбай</h2>
-              <button class="element__like-button" type="button" aria-label="Поставить лайк"></button>
-            </div>
-          </li>
-
-          <li class="element__list-item">
-            <img class="element__image" src="./images/place-altai.jpg" alt="Алтай">
-            <div class="element__group">
-              <h2 class="element__title">Алтай</h2>
-              <button class="element__like-button" type="button" aria-label="Поставить лайк"></button>
-            </div>
-          </li>
-
-          <li class="element__list-item">
-            <img class="element__image" src="./images/place-kolsky.jpg" alt="Кольский">
-            <div class="element__group">
-              <h2 class="element__title">Кольский</h2>
-              <button class="element__like-button" type="button" aria-label="Поставить лайк"></button>
-            </div>
-          </li>
-
-          <li class="element__list-item">
-            <img class="element__image" src="./images/place-karelia.jpg" alt="Карелия">
-            <div class="element__group">
-              <h2 class="element__title">Карелия</h2>
-              <button class="element__like-button" type="button" aria-label="Поставить лайк"></button>
-            </div>
-          </li>
-        </ul>
+        <ul class="element__list"></ul>
       </section>
+
+
 
     </main>
 
@@ -87,20 +41,54 @@
       <p class="footer__subtitle">&copy; 2023 Mesto Russia</p>
     </footer>
 
+
+
+    <section class="popup popup-profile">
+      <div class="popup__container">
+        <h2 class="popup__header">Редактировать профиль</h2>
+        <form class="popup__form popup__form_profile" name="popup__form_profile">
+          <input type="text" class="popup__input popup__input_type_name" id= "profilename-input" name="name" placeholder="Имя">
+          <input type="text" class="popup__input popup__input_type_info" id= "profileinfo-input" name="info" placeholder="О себе">
+          <button class="popup__button-save" type="submit">Сохранить</button>
+        </form>
+        <button class="popup__button-close" type="button"></button>
+      </div>
+    </section>
+
+    <section class="popup popup-element">
+      <div class="popup__container">
+        <h2 class="popup__header">Новое место</h2>
+        <form class="popup__form popup__form_element" name="popup__form_element">
+          <input type="text" class="popup__input popup__input_type_title" id= "elementtitle-input" name="title" placeholder="Название">
+          <input type="text" class="popup__input popup__input_type_link" id= "elementlink-input" name="link" placeholder="Ссылка на картинку">
+          <button class="popup__button-save" type="submit">Создать</button>
+        </form>
+        <button class="popup__button-close" type="button"></button>
+      </div>
+    </section>
+
+    <section class="popup popup-image">
+      <div class="popup__image-container">
+        <button class="popup__button-close" type="button"></button>
+        <img class="popup__image" src="#" alt="Фотография пользователя">
+        <p class="popup__caption"></p>
+      </div>
+    </section>
+
+    <template class="template__element" id="template">
+      <li class="element__list-item">
+        <button class="element__delete-button" type="button" aria-label="Удалить"></button>
+        <img class="element__image" src="#" alt="Фотография пользователя">
+        <div class="element__group">
+          <h2 class="element__title"></h2>
+          <button class="element__like-button" type="button" aria-label="Поставить лайк"></button>
+        </div>
+      </li>
+    </template>
+
   </div>
-
-  <section class="popup">
-    <div class="popup__container">
-      <h2 class="popup__header">Редактировать профиль</h2>
-      <form class="popup__form" name="popup__form">
-        <input type="text" class="popup__input popup__input_type_name" name="name">
-        <input type="text" class="popup__input popup__input_type_info" name="info">
-        <button class="popup__button-save" type="submit">Сохранить</button>
-      </form>
-      <button class="popup__button-close" type="button"></button>
-    </div>
-  </section>
-
+  <script src="./scripts/array.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
+

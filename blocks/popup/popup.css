@@ -1,13 +1,19 @@
 .popup {
-  display: none;
-  justify-content: center;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  transition: visibility .6s, opacity .6s;
+  overflow: hidden;
+  cursor: pointer;
+
   font-family: "Inter", "Arial", "sans-serif";
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -15,4 +21,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
+
 }
+
+
+
