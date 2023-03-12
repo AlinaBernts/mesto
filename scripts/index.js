@@ -1,7 +1,6 @@
 /*Находим форму в DOM*/
 
 /*Переменные*/
-const popup = document.querySelector('.popup');//общий попап
 
 const popupProfile = document.querySelector('.popup-profile');/*Попап профиля*/
 const popupElement = document.querySelector('.popup-element');/*Попап добавления карточки*/
@@ -9,8 +8,6 @@ const popupImage = document.querySelector('.popup-image');//Попап карт�
 
 const editButton = document.querySelector('.profile__edit-button');/*Кнопка редактирования профиля*/
 const addButton = document.querySelector('.profile__add-button');/*Кнопка добавления картинки*/
-
-const saveButton = document.querySelector('.popup__button-save');/*Кнопка сохранения*/
 
 const formProfile = document.querySelector('.popup__form_profile');/*форма профиля*/
 const formElement = document.querySelector('.popup__form_element');/*форма карточки*/
@@ -28,7 +25,7 @@ const imageClick = document.querySelector('.popup__image');//картинка в
 const captionImage = document.querySelector('.popup__caption');//подпись в открывшемся попапе
 
 const element = document.querySelector('.element'); //блок всех карточек
-const elementTemplate = document.querySelector('.template__element'); //шаблон карточек
+const elementTemplate = document.querySelector('.template__element').content; //шаблон карточек
 const elementList = document.querySelector('.element__list');
 
 
@@ -45,12 +42,11 @@ const closePopup = function(popup) {
 }
 
 //все кнопки закрыия попап
-const closeButton = document.querySelectorAll('.popup__button-close');/*Кнопка закрытия попапов*/
-closeButton.forEach((button) => {
+const closeButtons = document.querySelectorAll('.popup__button-close');/*Кнопка закрытия попапов*/
+closeButtons.forEach((button) => {
   const popup = button.closest('.popup');
   button.addEventListener('click', () => closePopup(popup));
 });
-
 
 /*                          ПОПАП ПРОФИЛЯ                */
 
@@ -71,19 +67,16 @@ editButton.addEventListener('click', function () {
   infoInput.value = profileSubtitle.textContent;
 });
 
-
 /*                          ПОПАП КАРТОЧКИ                   */
 
 //делаем открытие и редактирование полей попап карточки нажатием на кнопку добавить
 addButton.addEventListener('click', function () {
   openPopup(popupElement);
-  });
+});
 
 /* Создаем новую карточку */
 function createCard(item) {
-  const elementListItem = elementTemplate.content.cloneNode(true); //элемент самой карточки
-
-
+  const elementListItem = elementTemplate.querySelector('.element__list-item').cloneNode(true); //элемент самой карточки
 
   const elementName = elementListItem.querySelector('.element__title');//подпись карточки
   elementName.textContent = item.name
@@ -95,7 +88,7 @@ function createCard(item) {
 
   //удалить карточку кликом по урне
   const buttonDelete = elementListItem.querySelector('.element__delete-button'); //кнопка удаления
-    buttonDelete.addEventListener('click', function () {
+  buttonDelete.addEventListener('click', function () {
     const parentsOfDelete = buttonDelete.closest('.element__list-item')
     parentsOfDelete.remove();
   });
@@ -129,23 +122,10 @@ const addElementSubmit = (evt) => {
   closePopup(popupElement);
 };
 
-const renderInitialCard = (element) => {
-  elementList.append(createCard(element));
-}
-
-
 initialCards.forEach(function (item) {
   elementList.append(createCard(item));
 });
 
-
 /*Сохраняем отредактированные данные*/
 popupProfile.addEventListener('submit', handleFormProfileSubmit); //Слушатель открытия попапа редактирования профиля
 formElement.addEventListener('submit', addElementSubmit);//Слушатель открытия попапа добавления карточки
-
-
-
-
-
-
-
