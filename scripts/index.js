@@ -34,19 +34,42 @@ const elementList = document.querySelector('.element__list');
 //открытие попапа
 const openPopup = function(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closePopupOverlay);
+  document.addEventListener('keydown', closePopupEsc);
 }
 
 //закрытие попапа
 const closePopup = function(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closePopupOverlay);
+  document.removeEventListener('keydown', closePopupEsc);
 }
 
 //все кнопки закрыия попап
 const closeButtons = document.querySelectorAll('.popup__button-close');/*Кнопка закрытия попапов*/
 closeButtons.forEach((button) => {
   const popup = button.closest('.popup');
-  button.addEventListener('click', () => closePopup(popup));
+  button.addEventListener('click', () => closePopup(popup));//слушатель закрытия по клику
 });
+
+/*                    ЗАКРЫТИЕ ПОПАПА КЛИКОМ НА ОВЕРЛЕЙ             */
+const closePopupOverlay = document.querySelectorAll('.popup');
+closePopupOverlay.forEach((popup) => {
+  popup.addEventListener('click', (evt) => {
+    if (evt.target === popup) {
+      closePopup(popup);
+    };
+  });
+});
+
+
+/*                    ЗАКРЫТИЕ ПОПАПА КЛИКОМ НА ESC                 */
+const closePopupEsc = (evt) => {
+  if(evt.key === 'Escape') {
+    const popup = document.querySelector('.popup_opened');
+    closePopup(popup);
+  }
+}
 
 /*                          ПОПАП ПРОФИЛЯ                */
 
@@ -113,10 +136,10 @@ function createCard(item) {
 
 //отправить форму данных карточки
 const addElementSubmit = (evt) => {
-  evt.preventDefault()
+  evt.preventDefault();
 
   const newElement = {name: nameImageAdd.value, link: linkImageAdd.value}
-  elementList.prepend(createCard(newElement))
+  elementList.prepend(createCard(newElement));
 
   evt.target.reset();
   closePopup(popupElement);
@@ -129,3 +152,4 @@ initialCards.forEach(function (item) {
 /*Сохраняем отредактированные данные*/
 popupProfile.addEventListener('submit', handleFormProfileSubmit); //Слушатель открытия попапа редактирования профиля
 formElement.addEventListener('submit', addElementSubmit);//Слушатель открытия попапа добавления карточки
+
